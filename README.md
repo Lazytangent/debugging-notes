@@ -72,3 +72,27 @@ sides, you'll cause recursive loops of SQL queries.
 Check the route path to make sure that the wildcard set matches the variable
 getting pulled from the params. This applies to both frontend `Route` components
 and backend Express routes.
+
+## `.findByPk` query doesn't return a row
+
+If they're getting the `id` that they're using to query with from `req.params`,
+check to see if they've converted that value to a Number type before querying
+with it.
+
+## Missing Re-render from a State Change
+
+If the Redux DevTools are showing that something did change in the `Diff` tab,
+and that an action did get dispatched, but the component in question did not
+re-render to show the updated data, then there's probably something wrong with
+the reducer case for this action type. Make sure that no accidental mutation of
+the old state is happening, which might be a result of having a deeply nested
+state object.
+
+## Nothing seems to happen after a dispatch
+
+Normally, I would say check for error messages, either in the browser console,
+or in the backend terminal. But if nothing seems to be happening, then check the
+backend route in question to see if they are sending any kind of response after
+the request has been completed. Some of the time, they just need to `res.json()`
+something, even an empty object would help. This lets the `fetch` in the
+frontend continue (and potentially show whatever errors were actually there).
