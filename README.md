@@ -14,8 +14,9 @@ depending on what you've done to get to this error message.
     that you've created the route with a path that matches where you're trying
     to go.
 * It's possibly a thunk that is doing a `fetch` call to an API route that might
-    1) not exist yet or 2) might not have been attached to the backend app via
-    `router.use` and `app.use`.
+    1) not exist yet or
+    2) might not have been attached to the backend app via
+        `router.use` and `app.use`.
 
 ## Error Code: 403
 
