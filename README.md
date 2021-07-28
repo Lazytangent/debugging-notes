@@ -23,7 +23,8 @@ This typically means that the student is NOT using the `csrfFetch` from the
 Authenticate Me Walkthrough, but is instead using the `fetch` API.
 
 If not the first thing, then it's possible that their CSRF is not correctly set
-up, either in their `csrfFetch` or in their backend `app.js` or `routes/index.js
+up, either in their `csrfFetch` or in their backend `app.js` or
+`routes/index.js`
 
 ## `token` cookie gets removed on when `restoreUser` middleware is used
 
