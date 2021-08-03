@@ -12,7 +12,7 @@ To use the Chrome debugger:
 * Open the browser console
 * Trigger the function. Depending on when your thunk is dispatched, it could be
     triggered when you reload the page or click a button
-* Your app should pause when it hits the debugger and you can inspect variabels
+* Your app should pause when it hits the debugger and you can inspect variables
     in your Chrome DevTools
 * You may step through or continue using the debugger menu bar
 
