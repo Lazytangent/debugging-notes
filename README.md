@@ -112,4 +112,11 @@ the request has been completed. Some of the time, they just need to `res.json()`
 something, even an empty object would help. This lets the `fetch` in the
 frontend continue (and potentially show whatever errors were actually there).
 
+## `.map` is not a function
+
+Since it's getting to the `.map` call without error-ing out, we know that the
+variable that you're calling the `.map` method on is not `undefined`, which is
+good. But we also know that it's not an `Array` since we can't call the `.map`
+method on it.
+
 [JavaScript Debugger]: https://javascript.info/debugging-chrome
