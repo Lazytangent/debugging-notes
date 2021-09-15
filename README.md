@@ -119,4 +119,11 @@ variable that you're calling the `.map` method on is not `undefined`, which is
 good. But we also know that it's not an `Array` since we can't call the `.map`
 method on it.
 
+## `431: Request Headers too large`
+
+Usually happens when the React frontend tries to proxy requests to itself. Check
+the `frontend/package.json` to see what the `"proxy"` key is, and make sure that
+it is pointing to the backend development server. You'll need to restart the
+frontend server if you've made a change to the `package.json`.
+
 [JavaScript Debugger]: https://javascript.info/debugging-chrome
