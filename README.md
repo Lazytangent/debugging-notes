@@ -127,3 +127,17 @@ it is pointing to the backend development server. You'll need to restart the
 frontend server if you've made a change to the `package.json`.
 
 [JavaScript Debugger]: https://javascript.info/debugging-chrome
+
+## Sequelize: TypeError: Cannot read property `replace` of undefined
+
+Typically seen when Sequelize is attempting to read a variable taken from the
+environment (like a `.env` file through the `dotenv` command). If the
+environment variables are unavailable, then Sequelize will end up attempting to
+call the `replace` method on `undefined`.
+
+You can check for the existence of the environment variables that are being used
+by placing a `console.log(config)` near the top of the `config/database.js`
+file to examine the `config` object imported from the `config/index.js` file.
+
+Sometimes, the student has just forgotten the `dotenv` part of the `db:`
+commands. Sometimes, it might be a little more than that.
