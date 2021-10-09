@@ -141,3 +141,16 @@ file to examine the `config` object imported from the `config/index.js` file.
 
 Sometimes, the student has just forgotten the `dotenv` part of the `db:`
 commands. Sometimes, it might be a little more than that.
+
+## Sequelize tells you to install the `mysql2` package
+
+If the `.sequelizerc` file was made after running the `npx sequelize init`
+command, or was placed in the wrong location when running that command, then the
+generated files will be at the default location for Sequelize and look for
+a `config.json` file. This can easily be remedied by removing the files and
+directories created by the `init` command, recreating the `.sequelizerc` in the
+right place with the right contents, and re-running the `npx sequelize init`
+command, or by moving the files and properly updating the `models/index.js` file
+to find the right config file. For the purposes of Authenticate Me, the config
+variable should point to the `config/database.js` file in the `backend`
+directory.
