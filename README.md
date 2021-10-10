@@ -3,6 +3,14 @@
 A compilation of errors you might see during Week 16 of App Academy's Online SWE
 bootcamp.
 
+The notes are split up by section to (hopefully) make finding the issue you're
+having easier.
+
+* [General][general]
+* [React and Redux][react-redux]
+* [Error Codes][error-codes]
+* [Sequelize][sequelize]
+
 ## Chrome Debugger
 
 To use the Chrome debugger:
@@ -19,3 +27,8 @@ To use the Chrome debugger:
 For more information, check out this page: [JavaScript Debugger].
 
 [JavaScript Debugger]: https://javascript.info/debugging-chrome
+
+[general]: ./GENERAL.md
+[react-redux]: ./REACT_REDUX.md
+[error-codes]: ./ERROR_CODES.md
+[sequelize]: ./SEQUELIZE.md
