@@ -25,3 +25,8 @@ request body doesn't show up when you `console.log` it in the route handler,
 then check the headers on the Postman request. Be sure to have all the headers
 that Postman sets. You'll at least need the `Content-Type` and the
 `Content-Length` headers for the request to be properly parsed in the backend.
+
+## 500 Status Code error on form on Heroku but working locally
+
+Check to make sure that the `JWT_SECRET` and `JWT_EXPIRES_IN` environment
+variables are set in the `Config Vars` on Heroku.
