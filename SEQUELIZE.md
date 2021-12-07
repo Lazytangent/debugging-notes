@@ -55,3 +55,29 @@ sides, you'll cause recursive loops of SQL queries.
 If they're getting the `id` that they're using to query with from `req.params`,
 check to see if they've converted that value to a Number type before querying
 with it.
+
+## Sequelize looks for a database on port `3306`
+
+One of two potential issues:
+
+1. Line 8 on the `backend/db/models/index.js` file might not be pointing to the
+   `backend/config/database.js` file.
+2. The `backend/config/database.js` might not have the correct `dialect` key for
+   the environment.
+
+## Sequelize can't connect to `5423`
+
+Postgres might not be running. Check the status of Postgres and if it's not
+running, start the instance.
+
+On MacOS, if Postgres was instaleld with Homebrew, you can run
+
+```bash
+brew services start postgresql
+```
+
+On WSL, you can run
+
+```bash
+sudo service postgresql start
+```
